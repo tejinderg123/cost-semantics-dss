@@ -1,0 +1,4 @@
+scenario,model,status,objective_value,on_time_units,unserved_units,internal_production,external_supply,actual_financial_cost,notional_penalty_score,max_inventory_violation_units,min_capacity_shortfall_units,variables,constraints,solve_seconds
+Scaled stress test,A_transactional_only,Optimal,1017499.22,59129.0,62954.0,55580.0,0.0,1017499.2200000001,3128164.0,0.0,1633.0,24120,16920,0.6444437000027392
+Scaled stress test,B_notional_only,Optimal,0.0,122083.0,0.0,40653.0,77881.0,1891546.0,0.0,0.0,0.0,24120,16920,0.8063162000034936
+Scaled stress test,C_governed_hybrid,Optimal,1237927.0,122083.0,0.0,118534.0,0.0,1237927.0,0.0,0.0,0.0,24120,16920,0.8414317000060691

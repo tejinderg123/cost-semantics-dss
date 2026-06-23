@@ -276,17 +276,14 @@ def scaled_data(seed=7):
 
 def run_case(name, data):
     summaries = []
-    details = []
     for design in DESIGNS:
-        summary, detail = solve_supply_lp(name, *data, design)
+        summary, _ = solve_supply_lp(name, *data, design)
         summaries.append(summary)
-        details.append(detail)
-    return summaries, details
+    return summaries
 
 
 def main():
     all_summaries = []
-    all_details = []
 
     sensitivity = [
         ("Baseline", baseline_data()),
@@ -298,19 +295,13 @@ def main():
         ("Demand +10%", baseline_data(demand_factor=1.1)),
     ]
     for name, data in sensitivity:
-        summaries, details = run_case(name, data)
+        summaries = run_case(name, data)
         all_summaries.extend(summaries)
-        all_details.extend(details)
 
-    scaled_summaries, scaled_details = run_case("Scaled stress test", scaled_data())
+    scaled_summaries = run_case("Scaled stress test", scaled_data())
     all_summaries.extend(scaled_summaries)
-    all_details.extend(scaled_details)
 
     summary_df = pd.DataFrame(all_summaries)
-    detail_df = pd.concat(all_details, ignore_index=True)
-    summary_df.to_csv(OUT / "DSS_Cost_Semantics_LP_Evaluation_Summary.csv", index=False)
-    detail_df.to_csv(OUT / "DSS_Cost_Semantics_LP_Evaluation_Details.csv", index=False)
-
     baseline = summary_df[summary_df["scenario"] == "Baseline"]
     sensitivity_c = summary_df[(summary_df["scenario"] != "Scaled stress test") & (summary_df["model"] == "C_governed_hybrid")]
     scaled = summary_df[summary_df["scenario"] == "Scaled stress test"]

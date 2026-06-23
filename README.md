@@ -7,12 +7,10 @@ Cost Semantics in Enterprise Planning Decision Support Systems: A Two-Layer Arch
 ## Contents
 
 - dss_cost_semantics_lp_evaluation.py: LP evaluation using PuLP/CBC, including baseline, sensitivity, and scaled stress-test runs.
-- DSS_Cost_Semantics_Evaluation_Summary.csv: baseline model summary output.
-- DSS_Cost_Semantics_Sensitivity_Results.csv: sensitivity-analysis output.
-- DSS_Cost_Semantics_Scaled_Stress_Test.csv: scaled 20-product, 10-location, 12-period stress-test output.
-- DSS_Cost_Semantics_LP_Evaluation_Summary.csv: full LP summary output.
-- DSS_Cost_Semantics_LP_Evaluation_Details.csv: full LP detail output.
 - requirements.txt: minimal Python requirements.
+- outputs/DSS_Cost_Semantics_Evaluation_Summary.csv: baseline model summary output.
+- outputs/DSS_Cost_Semantics_Sensitivity_Results.csv: sensitivity-analysis output.
+- outputs/DSS_Cost_Semantics_Scaled_Stress_Test.csv: scaled 20-product, 10-location, 12-period stress-test output.
 
 ## How to Run
 
@@ -23,7 +21,7 @@ pip install -r requirements.txt
 python dss_cost_semantics_lp_evaluation.py
 ```
 
-The script writes CSV outputs to an `outputs` folder relative to the run directory.
+The script writes the three CSV outputs to an `outputs` folder relative to the run directory.
 
 ## Data
 
