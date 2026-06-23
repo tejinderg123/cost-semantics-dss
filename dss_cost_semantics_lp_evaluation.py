@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-# Reproducibility package refresh: 2026-06-22 22:57 -04:00.
+# Reproducibility package refresh: 2026-06-23T03:38:02Z.
 
 import random
 import sys
@@ -26,6 +26,7 @@ except ModuleNotFoundError:
 
 OUT = Path("outputs")
 OUT.mkdir(exist_ok=True)
+PACKAGE_REFRESH_UTC = "2026-06-23T03:38:02Z"
 
 
 @dataclass(frozen=True)
@@ -304,6 +305,7 @@ def main():
     all_summaries.extend(scaled_summaries)
 
     summary_df = pd.DataFrame(all_summaries)
+    summary_df["package_refresh_utc"] = PACKAGE_REFRESH_UTC
     baseline = summary_df[summary_df["scenario"] == "Baseline"]
     sensitivity_c = summary_df[(summary_df["scenario"] != "Scaled stress test") & (summary_df["model"] == "C_governed_hybrid")]
     scaled = summary_df[summary_df["scenario"] == "Scaled stress test"]

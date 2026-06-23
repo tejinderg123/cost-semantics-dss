@@ -4,7 +4,7 @@ This package supports the manuscript:
 
 Cost Semantics in Enterprise Planning Decision Support Systems: A Two-Layer Architecture
 
-Package refresh: 2026-06-22 22:57 -04:00.
+Package refresh: 2026-06-23T03:38:02Z.
 
 ## Contents
 
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 python dss_cost_semantics_lp_evaluation.py
 ```
 
-The script writes the three CSV outputs to an `outputs` folder relative to the run directory.
+The script writes the three CSV outputs to an `outputs` folder relative to the run directory. The CSV outputs include a `package_refresh_utc` metadata column so the package version can be identified without changing the model logic.
 
 The checked run used pandas 3.0.1, PuLP 3.3.2, and the CBC 2.10.3 solver bundled with PuLP.
 
