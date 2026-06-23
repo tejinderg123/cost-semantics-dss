@@ -8,8 +8,18 @@ from pathlib import Path
 
 import pandas as pd
 
-sys.path.insert(0, str(Path("work") / "solver_deps"))
-import pulp  # noqa: E402
+try:
+    import pulp
+except ModuleNotFoundError:
+    solver_paths = [
+        Path("work") / "solver_deps",
+        Path(__file__).resolve().parents[2] / "work" / "solver_deps",
+    ]
+    for solver_path in solver_paths:
+        if solver_path.exists():
+            sys.path.insert(0, str(solver_path))
+            break
+    import pulp  # noqa: E402
 
 
 OUT = Path("outputs")
@@ -47,7 +57,8 @@ def solve_supply_lp(
     notional: dict,
     design: ModelDesign,
 ) -> tuple[dict, pd.DataFrame]:
-    prob = pulp.LpProblem(f"{scenario_name}_{design.name}", pulp.LpMinimize)
+    safe_scenario = "".join(ch if ch.isalnum() else "_" for ch in scenario_name).strip("_")
+    prob = pulp.LpProblem(f"{safe_scenario}_{design.name}", pulp.LpMinimize)
 
     internal = pulp.LpVariable.dicts("internal", (products, locations, periods), lowBound=0)
     external = pulp.LpVariable.dicts("external", (products, locations, periods), lowBound=0)
