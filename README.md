@@ -4,6 +4,8 @@ This package supports the manuscript:
 
 Cost Semantics in Enterprise Planning Decision Support Systems: A Two-Layer Architecture
 
+Package refresh: 2026-06-22 22:57 -04:00.
+
 ## Contents
 
 - dss_cost_semantics_lp_evaluation.py: LP evaluation using PuLP/CBC, including baseline, sensitivity, and scaled stress-test runs.
@@ -23,7 +25,7 @@ python dss_cost_semantics_lp_evaluation.py
 
 The script writes the three CSV outputs to an `outputs` folder relative to the run directory.
 
-The checked run used Python with PuLP 3.3.2 and the CBC 2.10.3 solver bundled with PuLP.
+The checked run used pandas 3.0.1, PuLP 3.3.2, and the CBC 2.10.3 solver bundled with PuLP.
 
 ## Data
 

@@ -1,8 +1,8 @@
 scenario,model,status,objective_value,on_time_units,unserved_units,internal_production,external_supply,actual_financial_cost,notional_penalty_score,max_inventory_violation_units,min_capacity_shortfall_units,variables,constraints,solve_seconds
-Baseline,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.18822499999805586
-Non-delivery penalty 50%,C_governed_hybrid,Optimal,3410.0,260.0,80.0,240.0,0.0,2810.0,1000.0,0.0,0.0,33,24,0.2235646999979508
-Non-delivery penalty 200%,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.25900969999929657
-External capacity tight,C_governed_hybrid,Optimal,3990.0,320.0,20.0,240.0,60.0,3590.0,500.0,0.0,0.0,33,24,0.18990920000214828
-External capacity expanded,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.2362615999954869
-Demand -10%,C_governed_hybrid,Optimal,3229.0,306.0,0.0,240.0,46.0,3229.0,0.0,0.0,0.0,33,24,0.2082691000032355
-Demand +10%,C_governed_hybrid,Optimal,4466.0,374.0,0.0,240.0,114.0,4466.0,0.0,0.0,0.0,33,24,0.2588348999997834
+Baseline,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.24214159999974072
+Non-delivery penalty 50%,C_governed_hybrid,Optimal,3410.0,260.0,80.0,240.0,0.0,2810.0,1000.0,0.0,0.0,33,24,0.32894730000407435
+Non-delivery penalty 200%,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.18637889999808976
+External capacity tight,C_governed_hybrid,Optimal,3990.0,320.0,20.0,240.0,60.0,3590.0,500.0,0.0,0.0,33,24,0.18470459999662125
+External capacity expanded,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.2507428000026266
+Demand -10%,C_governed_hybrid,Optimal,3229.0,306.0,0.0,240.0,46.0,3229.0,0.0,0.0,0.0,33,24,0.23606979999749456
+Demand +10%,C_governed_hybrid,Optimal,4466.0,374.0,0.0,240.0,114.0,4466.0,0.0,0.0,0.0,33,24,0.2712595000048168
