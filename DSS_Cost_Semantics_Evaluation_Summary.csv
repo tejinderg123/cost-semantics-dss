@@ -1,0 +1,4 @@
+scenario,model,status,objective_value,on_time_units,unserved_units,internal_production,external_supply,actual_financial_cost,notional_penalty_score,max_inventory_violation_units,min_capacity_shortfall_units,variables,constraints,solve_seconds
+Baseline,A_transactional_only,Optimal,2690.0,150.0,190.0,130.0,0.0,2690.0,10100.0,0.0,50.0,33,24,0.22627690000081202
+Baseline,B_notional_only,Optimal,0.0,340.0,0.0,210.0,110.0,4080.0,0.0,0.0,0.0,33,24,0.2549834000019473
+Baseline,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.3414492999945651

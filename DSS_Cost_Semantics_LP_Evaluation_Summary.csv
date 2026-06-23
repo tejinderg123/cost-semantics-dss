@@ -1,0 +1,25 @@
+scenario,model,status,objective_value,on_time_units,unserved_units,internal_production,external_supply,actual_financial_cost,notional_penalty_score,max_inventory_violation_units,min_capacity_shortfall_units,variables,constraints,solve_seconds
+Baseline,A_transactional_only,Optimal,2690.0,150.0,190.0,130.0,0.0,2690.0,10100.0,0.0,50.0,33,24,0.22627690000081202
+Baseline,B_notional_only,Optimal,0.0,340.0,0.0,210.0,110.0,4080.0,0.0,0.0,0.0,33,24,0.2549834000019473
+Baseline,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.3414492999945651
+Non-delivery penalty 50%,A_transactional_only,Optimal,2690.0,150.0,190.0,130.0,0.0,2690.0,5250.0,0.0,50.0,33,24,0.25053940000361763
+Non-delivery penalty 50%,B_notional_only,Optimal,0.0,340.0,0.0,210.0,110.0,4080.0,0.0,0.0,0.0,33,24,0.21364829999947688
+Non-delivery penalty 50%,C_governed_hybrid,Optimal,3410.0,260.0,80.0,240.0,0.0,2810.0,1000.0,0.0,0.0,33,24,0.19586830000480404
+Non-delivery penalty 200%,A_transactional_only,Optimal,2690.0,150.0,190.0,130.0,0.0,2690.0,19800.0,0.0,50.0,33,24,0.4332626000032178
+Non-delivery penalty 200%,B_notional_only,Optimal,0.0,340.0,0.0,210.0,110.0,4080.0,0.0,0.0,0.0,33,24,0.20355779999954393
+Non-delivery penalty 200%,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.22569690000091214
+External capacity tight,A_transactional_only,Optimal,2690.0,150.0,190.0,130.0,0.0,2690.0,10100.0,0.0,50.0,33,24,0.2088487000000896
+External capacity tight,B_notional_only,Optimal,500.0,320.0,20.0,240.0,60.0,3600.0,500.0,0.0,0.0,33,24,0.19379330000083428
+External capacity tight,C_governed_hybrid,Optimal,3990.0,320.0,20.0,240.0,60.0,3590.0,500.0,0.0,0.0,33,24,0.21464840000408003
+External capacity expanded,A_transactional_only,Optimal,2690.0,150.0,190.0,130.0,0.0,2690.0,10100.0,0.0,50.0,33,24,0.1837502999987919
+External capacity expanded,B_notional_only,Optimal,0.0,340.0,0.0,180.0,140.0,4320.0,0.0,0.0,0.0,33,24,0.19088519999786513
+External capacity expanded,C_governed_hybrid,Optimal,3840.0,340.0,0.0,240.0,80.0,3840.0,0.0,0.0,0.0,33,24,0.20257180000044173
+Demand -10%,A_transactional_only,Optimal,2401.0,135.0,171.0,115.0,0.0,2401.0,9250.0,0.0,65.0,33,24,0.2263186999989557
+Demand -10%,B_notional_only,Optimal,0.0,306.0,0.0,188.0,98.0,3644.0,0.0,0.0,0.0,33,24,0.3412079999980051
+Demand -10%,C_governed_hybrid,Optimal,3229.0,306.0,0.0,240.0,46.0,3229.0,0.0,0.0,0.0,33,24,0.20282090000546305
+Demand +10%,A_transactional_only,Optimal,2979.0,165.0,209.0,145.0,0.0,2979.0,10950.0,0.0,35.0,33,24,0.2033621000009589
+Demand +10%,B_notional_only,Optimal,0.0,374.0,0.0,234.0,120.0,4514.0,0.0,0.0,0.0,33,24,0.1917373000032967
+Demand +10%,C_governed_hybrid,Optimal,4466.0,374.0,0.0,240.0,114.0,4466.0,0.0,0.0,0.0,33,24,0.19506369999726303
+Scaled stress test,A_transactional_only,Optimal,1017499.22,59129.0,62954.0,55580.0,0.0,1017499.2200000001,3128164.0,0.0,1633.0,24120,16920,0.5117152999955579
+Scaled stress test,B_notional_only,Optimal,0.0,122083.0,0.0,40653.0,77881.0,1891546.0,0.0,0.0,0.0,24120,16920,0.5994322999977157
+Scaled stress test,C_governed_hybrid,Optimal,1237927.0,122083.0,0.0,118534.0,0.0,1237927.0,0.0,0.0,0.0,24120,16920,0.5523906000016723
