@@ -23,6 +23,8 @@ python dss_cost_semantics_lp_evaluation.py
 
 The script writes the three CSV outputs to an `outputs` folder relative to the run directory.
 
+The checked run used Python with PuLP 3.3.2 and the CBC 2.10.3 solver bundled with PuLP.
+
 ## Data
 
 No confidential, proprietary, or organization-identifying operational data are included. All demand, cost, capacity, and penalty values are synthetic and created for research illustration.
